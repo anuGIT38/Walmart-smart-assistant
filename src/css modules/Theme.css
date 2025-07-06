@@ -1,0 +1,36 @@
+:root {
+  /* Light Theme */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #0071dc;
+  --input-bg: #f5f5f5;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --primary-color: #4da6ff;
+  --input-bg: #1e1e1e;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.auth-container {
+  background: var(--bg-color);
+  box-shadow: var(--card-shadow);
+}
+
+input,
+select {
+  background: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--input-bg);
+}
