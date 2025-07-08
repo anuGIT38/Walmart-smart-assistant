@@ -283,6 +283,19 @@ body.dark {
   transition: all 0.3s ease;
 }
 
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+    font-size: 1.3rem;
+  }
+}
+
 /* Light mode toggle */
 [data-theme="light"] .theme-toggle {
   color: #4a5568; /* Walmart dark gray */
