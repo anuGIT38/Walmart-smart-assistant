@@ -319,3 +319,58 @@ body.dark {
     font-size: 1.3rem;
   }
 }
+
+/* Error Messages */
+.auth-error {
+  color: #e53e3e;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  display: block;
+  font-size: 0.75rem;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.password-strength.weak {
+  color: #e53e3e;
+}
+
+.password-strength.medium {
+  color: #d97706;
+}
+
+.password-strength.strong {
+  color: #059669;
+}
+
+/* Form Styles */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .auth-error {
+  background: #2a0a0a;
+}
+
+[data-theme="dark"] .password-strength.weak {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .password-strength.medium {
+  color: #fdba74;
+}
+
+[data-theme="dark"] .password-strength.strong {
+  color: #6ee7b7;
+}

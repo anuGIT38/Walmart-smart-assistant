@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
-import "../css modules/Auth.css"; // Make sure this import exists
+import "../css modules/Auth.css";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useContext(ThemeContext);
