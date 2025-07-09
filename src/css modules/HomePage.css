@@ -23,12 +23,13 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 12px;
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  height: 60px;
+  gap: 10px;
 }
 
 .home-page.dark .app-header {
@@ -36,51 +37,52 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo Styles */
-.header-logo {
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-
 .walmart-logo {
-  height: 60px;
+  height: 40px;
   width: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .home-page.dark .walmart-logo {
   filter: brightness(0) invert(1);
 }
 
-/* App Title */
 .app-title {
-  font-size: 1.5rem;
-  margin: 0;
-  flex-grow: 1;
+  flex: 1;
   text-align: center;
-  padding: 0 20px;
+  font-size: 1.2rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
-/* Header Controls */
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: auto;
 }
 
-/* User Controls */
-.user-controls {
-  position: relative;
+/* Move user icon below header */
+.user-controls-below {
+  position: absolute;
+  top: 60px;
+  right: 12px;
+  z-index: 999;
 }
 
 .user-icon {
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
-  padding: 5px;
+  padding: 4px;
   transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .user-icon:hover {
@@ -91,7 +93,6 @@
   color: #f8fafc;
 }
 
-/* User Menu */
 .user-menu {
   position: absolute;
   right: 0;
@@ -141,14 +142,14 @@
   background: #0056b3;
 }
 
-/* Theme Toggle */
 .theme-toggle {
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
-  padding: 5px;
+  padding: 4px;
   transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -276,21 +277,13 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-  .app-header {
-    flex-wrap: wrap;
-    padding: 10px 15px;
-  }
-
   .app-title {
-    order: 3;
-    width: 100%;
-    padding: 10px 0 0;
-    font-size: 1.3rem;
+    font-size: 0.95rem;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr 1fr;
-    padding-top: 120px;
+  .theme-toggle,
+  .user-icon {
+    font-size: 1.3rem;
   }
 }
 
@@ -299,13 +292,9 @@
     grid-template-columns: 1fr;
   }
 
-  .header-controls {
-    gap: 15px;
-  }
-
   .user-icon,
   .theme-toggle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .ai-suggestion {
@@ -313,4 +302,271 @@
     bottom: 10px;
     right: 20px;
   }
+
+  .app-title {
+    font-size: 0.9rem;
+  }
+
+  .walmart-logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-header {
+    gap: 6px;
+  }
+
+  .app-title {
+    font-size: 0.85rem;
+  }
+
+  .theme-toggle,
+  .user-icon {
+    font-size: 1.2rem;
+    padding: 2px;
+  }
+}
+
+/* AR Navigation Styles */
+.ar-mockup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.store-layout {
+  border: 2px solid #0071dc;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.aisle {
+  margin-bottom: 15px;
+}
+
+.aisle h4 {
+  color: #0071dc;
+  margin-bottom: 8px;
+}
+
+.ar-guidance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  background: rgba(0, 113, 220, 0.1);
+  border-radius: 20px;
+}
+
+.ar-view-mock {
+  height: 200px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.home-page.dark .ar-view-mock {
+  background: #2d3748;
+  color: #ccc;
+}
+
+/* Voice Search Styles */
+.voice-button {
+  padding: 12px 24px;
+  background: #0071dc;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 20px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.voice-button.listening {
+  background: #e53e3e;
+  animation: pulse 1.5s infinite;
+}
+
+.voice-result {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 113, 220, 0.1);
+  border-radius: 8px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Barcode Scanner Styles */
+.scanner-mock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scanner-view {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border: 2px dashed #0071dc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.scanner-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.scanner-buttons button {
+  padding: 8px 16px;
+  background: #0071dc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-details {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  background: rgba(0, 113, 220, 0.05);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+/* AI Assistant - WhatsApp Style */
+.chat-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home-page.dark .chat-container {
+  border-color: #334155;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 8px 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 8px 12px;
+  border-radius: 18px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background: #0071dc;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message.ai {
+  background: #f0f0f0;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.home-page.dark .message.ai {
+  background: #2d3748;
+  color: #f0f0f0;
+}
+
+.chat-input {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+}
+
+.home-page.dark .chat-input {
+  border-top-color: #334155;
+  background: #1e293b;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.home-page.dark .chat-input input {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: white;
+}
+
+.chat-input button {
+  margin-left: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0071dc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scrollbar styling */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.home-page.dark .chat-messages::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.home-page.dark .chat-messages::-webkit-scrollbar-thumb {
+  background: #4a5568;
 }

@@ -7,15 +7,22 @@ body {
 
 /* ===== Walmart Header ===== */
 .walmart-header {
-  padding: 20px 0 0 20px;
-  position: fixed;
+  padding: 5px 20px;
+  position: absolute;
   top: 0;
   left: 0;
 }
 
-.walmart-logo {
+/* .walmart-logo {
   height: 60px;
   width: auto;
+} */
+
+.walmart-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* ===== Auth Container ===== */
