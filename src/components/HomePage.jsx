@@ -21,6 +21,15 @@ const HomePage = () => {
     lastPurchase: "Organic Shampoo",
   });
 
+  const [editUsername, setEditUsername] = useState(false);
+  const [newUsername, setNewUsername] = useState(user?.name || "");
+
+  const handleUsernameUpdate = () => {
+    // Update username logic here
+    setUser({ ...user, name: newUsername });
+    setEditUsername(false);
+  };
+
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
@@ -28,56 +37,72 @@ const HomePage = () => {
   return (
     <div className={`home-page ${theme}`}>
       {/* Header Section */}
+
       <header className="app-header">
-        {/* Walmart Logo - Top Left */}
-        <img src={logo} alt="Walmart" className="walmart-logo" />
+        {/* Walmart Logo - Left */}
+        <div className="header-logo">
+          <img src={logo} alt="Walmart" className="walmart-logo" />
+        </div>
 
-        <h1 className="app-title">Walmart Smart Assistant</h1>
-
-        {/* Account + Theme Toggle - Top Right */}
+        {/* Right Side Controls */}
         <div className="header-controls">
-          {/* <div className="user-controls">
-            <button
-              className="user-icon"
-              onClick={() => setUserMenuOpen(!userMenuOpen)}
-              aria-label="User menu"
-            >
-              👤
-            </button>
-            {userMenuOpen && (
-              <div className="user-menu">
-                <h3>{user?.name}</h3>
-                <p>{user?.email}</p>
-                <button onClick={() => logout()}>Logout</button>
-              </div>
-            )}
-          </div> */}
-
           <button
             className="theme-toggle"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             {theme === "light" ? "🌙" : "☀️"}
           </button>
+
+          <div className="user-controls">
+            <button
+              className="user-icon"
+              onClick={() => setUserMenuOpen(!userMenuOpen)}
+            >
+              👤
+            </button>
+
+            {userMenuOpen && (
+              <div className="user-menu">
+                {editUsername ? (
+                  <div className="username-edit">
+                    <input
+                      type="text"
+                      value={newUsername}
+                      onChange={(e) => setNewUsername(e.target.value)}
+                      autoFocus
+                    />
+                    <button onClick={handleUsernameUpdate}>Save</button>
+                    <button onClick={() => setEditUsername(false)}>
+                      Cancel
+                    </button>
+                  </div>
+                ) : (
+                  <h3 onClick={() => setEditUsername(true)}>
+                    {user?.name || "Guest"}
+                  </h3>
+                )}
+
+                <div className="user-activity">
+                  <h4>Recent Activity</h4>
+                  <ul>
+                    <li>Viewed Peanut Butter</li>
+                    <li>Purchased Organic Shampoo</li>
+                    <li>Searched for Snacks</li>
+                  </ul>
+                </div>
+
+                <div className="menu-actions">
+                  <button className="menu-button">Account Settings</button>
+                  <button className="menu-button" onClick={logout}>
+                    Logout
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </header>
 
-      <div className="user-controls">
-        <button
-          className="user-icon"
-          onClick={() => setUserMenuOpen(!userMenuOpen)}
-          aria-label="User menu"
-        >
-          👤
-        </button>
-        {userMenuOpen && (
-          <div className="user-menu">
-            <h3>{user?.name}</h3>
-            <p>{user?.email}</p>
-            <button onClick={() => logout()}>Logout</button>
-          </div>
-        )}
-      </div>
       {/* Main Features Grid */}
       <div className="features-grid">
         <button
