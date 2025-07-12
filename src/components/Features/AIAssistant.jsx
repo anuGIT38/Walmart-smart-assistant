@@ -53,6 +53,29 @@ const AIAssistant = () => {
           <button type="submit">→</button>
         </form>
       </div>
+
+      <div className="feature-demo-context">
+        <h3 className="demo-title">AI Shopping Assistant</h3>
+        <p className="demo-text">Your personal Walmart shopping helper can:</p>
+        <ul className="demo-features">
+          <li>
+            {" "}
+            <strong>Answer product questions</strong> instantly
+          </li>
+          <li>
+            {" "}
+            <strong>Manage your shopping list</strong> automatically
+          </li>
+          <li>
+            {" "}
+            <strong>Suggest smart alternatives</strong> when items are out of
+            stock
+          </li>
+        </ul>
+        <p className="demo-note">
+          Tip: Try asking "What's a good substitute for almond milk?"
+        </p>
+      </div>
     </div>
   );
 };

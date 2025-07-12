@@ -92,7 +92,6 @@ const BarcodeScanner = () => {
   return (
     <div className="barcode-scanner-container">
       <h2 className="scanner-title">Product Scanner</h2>
-
       {/* Camera Scanner Section */}
       <div className="scanner-section">
         {!isScanning ? (
@@ -118,7 +117,6 @@ const BarcodeScanner = () => {
           </div>
         )}
       </div>
-
       {/* Manual Entry Section */}
       <div className="manual-entry-section">
         <h3>Or Enter Barcode Manually</h3>
@@ -135,10 +133,8 @@ const BarcodeScanner = () => {
           </button>
         </form>
       </div>
-
       {/* Error Display */}
       {error && <div className="error-message">{error}</div>}
-
       {/* Product Display */}
       {scannedProduct && (
         <div className="product-display">
@@ -171,6 +167,28 @@ const BarcodeScanner = () => {
           )}
         </div>
       )}
+      {/*BarcodeScanner example*/}
+      <div className="feature-demo-context">
+        <h3 className="demo-title">Smart Product Scanner</h3>
+        <p className="demo-text">
+          Scan any product barcode to instantly access:
+        </p>
+        <ul className="demo-features">
+          <li>
+            <strong>Real-time pricing</strong> and promotions
+          </li>
+          <li>
+            <strong>Customer reviews</strong> and ratings
+          </li>
+          <li>
+            <strong>Detailed product info</strong> and alternatives
+          </li>
+        </ul>
+        <p className="demo-note">
+          Tip: Hold your phone steady about 6 inches from the barcode for best
+          results.
+        </p>
+      </div>
     </div>
   );
 };

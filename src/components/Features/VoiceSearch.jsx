@@ -150,6 +150,28 @@ const VoiceSearch = ({ onSearch }) => {
           No products found for "{listening ? transcript : manualQuery}"
         </div>
       ) : null}
+
+      <div className="feature-demo-context">
+        <h3 className="demo-title">Voice-Activated Search</h3>
+        <p className="demo-text">
+          Speak naturally to find products and get answers:
+        </p>
+        <ul className="demo-features">
+          <li>
+            <strong>Hands-free operation</strong> while shopping
+          </li>
+          <li>
+            <strong>Natural language queries</strong> like "Where's the organic
+            milk?"
+          </li>
+          <li>
+            <strong>Instant location mapping</strong> to AR navigation
+          </li>
+        </ul>
+        <p className="demo-note">
+          Tip: Speak clearly in a normal voice - no need to shout!
+        </p>
+      </div>
     </div>
   );
 };

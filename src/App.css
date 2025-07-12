@@ -89,3 +89,9 @@ textarea {
   padding: 1.5rem;
   margin-bottom: 1rem;
 }
+
+:root {
+  --walmart-blue: #0071ce;
+  --walmart-dark-blue: #004d9a;
+  --walmart-yellow: #ffeb3b;
+}

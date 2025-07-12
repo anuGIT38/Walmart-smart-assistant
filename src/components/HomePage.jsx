@@ -10,7 +10,7 @@ import VoiceSearch from "./Features/VoiceSearch";
 
 const HomePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-  const [activeFeature, setActiveFeature] = useState(null);
+  const [activeFeature, setActiveFeature] = useState("ar");
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const { logout } = useAuth();
 
@@ -50,7 +50,7 @@ const HomePage = () => {
             className="theme-toggle"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            {theme === "light" ? "🌙" : "☀️"}
+            {theme === "light" ? "☀️" : "🌙"}
           </button>
 
           <div className="user-controls">
