@@ -95,3 +95,35 @@ textarea {
   --walmart-dark-blue: #004d9a;
   --walmart-yellow: #ffeb3b;
 }
+
+:root {
+  --bg-main: #ffffff;
+  --bg-card: #fdfdfd;
+  --text-main: #2c3e50;
+  --text-muted: #555;
+  --primary: #007aff;
+  --primary-dark: #005ecb;
+  --success: #28a745;
+  --success-dark: #218838;
+  --border: #e0e0e0;
+  --accent: #f6f8fa;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --error-bg: #ffe9e9;
+  --error-text: #c0392b;
+}
+
+.dark-theme {
+  --bg-main: #1e1e1e;
+  --bg-card: #2c2c2c;
+  --text-main: #f0f0f0;
+  --text-muted: #aaa;
+  --primary: #339cff;
+  --primary-dark: #1c7fd0;
+  --success: #4ecf78;
+  --success-dark: #3cbf68;
+  --border: #444;
+  --accent: #333;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --error-bg: #4a1a1a;
+  --error-text: #ff6b6b;
+}

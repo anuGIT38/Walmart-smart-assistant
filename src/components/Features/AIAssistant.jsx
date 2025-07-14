@@ -17,15 +17,14 @@ const AIAssistant = () => {
     // Mock AI response
     setTimeout(() => {
       const responses = [
-        "I found peanut butter in Aisle 1",
-        "Try almond butter as a healthier alternative",
+        "*B Natural Mixed Fruit Juice 1L (ITC): ₹105* -  No added sugar, made from fruit pulp. A healthier and potentially more sustainable choice due to its focus on natural ingredients",
         "Your last purchase was organic shampoo",
         "You're near the snacks section",
       ];
       setMessages((prev) => [
         ...prev,
         {
-          text: responses[Math.floor(Math.random() * responses.length)],
+          text: responses[0],
           sender: "ai",
         },
       ]);
@@ -60,16 +59,17 @@ const AIAssistant = () => {
         <ul className="demo-features">
           <li>
             {" "}
-            <strong>Answer product questions</strong> instantly
+            <strong>
+              Get product recommendations by name, brand, or category
+            </strong>
           </li>
           <li>
             {" "}
-            <strong>Manage your shopping list</strong> automatically
+            <strong>Filter by price, brand, or nutrition</strong>
           </li>
           <li>
             {" "}
-            <strong>Suggest smart alternatives</strong> when items are out of
-            stock
+            <strong>Context-aware follow-up and clarifications</strong>
           </li>
         </ul>
         <p className="demo-note">

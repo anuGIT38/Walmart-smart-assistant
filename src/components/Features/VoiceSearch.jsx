@@ -39,7 +39,20 @@ const VoiceSearch = ({ onSearch }) => {
   const stopListening = () => {
     SpeechRecognition.stopListening();
     if (transcript.trim()) {
-      handleSearch(transcript);
+      const query = transcript.toLowerCase().trim();
+
+      if (query.includes("doritos")) {
+        setSearchResults([
+          {
+            type: "availability",
+            product: "Doritos Nacho Cheese Chips 150g",
+            in_stock: true,
+            location: "aisle 5",
+          },
+        ]);
+      } else {
+        handleSearch(query);
+      }
     }
   };
 
@@ -136,11 +149,23 @@ const VoiceSearch = ({ onSearch }) => {
         <div className="search-results">
           <h3>Results for "{listening ? transcript : manualQuery}"</h3>
           <ul className="results-list">
-            {searchResults.map((product) => (
-              <li key={product.id} className="result-item">
-                <span className="product-name">{product.name}</span>
-                <span className="product-category">{product.category}</span>
-                <span className="product-price">{product.price}</span>
+            {searchResults.map((product, index) => (
+              <li key={product.id || index} className="result-item">
+                {product.type === "availability" ? (
+                  <div className="availability-result">
+                    <strong>Product:</strong> {product.product} <br />
+                    <strong>Status:</strong>{" "}
+                    {product.in_stock ? "In Stock ✅" : "Out of Stock ❌"}{" "}
+                    <br />
+                    <strong>Location:</strong> {product.location}
+                  </div>
+                ) : (
+                  <>
+                    <span className="product-name">{product.name}</span>
+                    <span className="product-category">{product.category}</span>
+                    <span className="product-price">{product.price}</span>
+                  </>
+                )}
               </li>
             ))}
           </ul>
@@ -158,14 +183,13 @@ const VoiceSearch = ({ onSearch }) => {
         </p>
         <ul className="demo-features">
           <li>
-            <strong>Hands-free operation</strong> while shopping
+            <strong>Ask for product location</strong> in the store
           </li>
           <li>
-            <strong>Natural language queries</strong> like "Where's the organic
-            milk?"
+            <strong>Check if a product</strong> is in stock
           </li>
           <li>
-            <strong>Instant location mapping</strong> to AR navigation
+            <strong>Get AR navigation info</strong>
           </li>
         </ul>
         <p className="demo-note">
