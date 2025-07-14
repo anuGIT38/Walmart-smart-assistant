@@ -357,10 +357,18 @@
   overflow: hidden;
 }
 
-.ar-viewport {
+/* .ar-viewport {
   flex: 1;
   min-height: 500px;
   background: #e0e0e0;
+} */
+
+.ar-viewport {
+  height: 70vh;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  border-radius: 8px;
 }
 
 .ar-controls {
@@ -434,17 +442,19 @@ canvas {
 
 /* Base Styles */
 .voice-search-container {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .voice-search-title {
   text-align: center;
-  color: #2c3e50;
+
   margin-bottom: 25px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 /* Search Form */
@@ -453,6 +463,7 @@ canvas {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 25px;
+  align-items: center;
 }
 
 .input-wrapper {
@@ -461,12 +472,14 @@ canvas {
 
 .search-input {
   width: 100%;
+
   padding: 15px 20px;
   border: 2px solid #ddd;
   border-radius: 30px;
   font-size: 16px;
   transition: all 0.3s;
   padding-right: 120px;
+  box-sizing: border-box;
 }
 
 .search-input:focus {
@@ -710,7 +723,7 @@ canvas {
 
 .scanner-title {
   text-align: center;
-  color: #2c3e50;
+  font-size: 1.6rem;
   margin-bottom: 30px;
 }
 

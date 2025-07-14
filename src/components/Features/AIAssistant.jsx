@@ -34,7 +34,7 @@ const AIAssistant = () => {
 
   return (
     <div className="feature-content">
-      <h3>AI Assistant</h3>
+      <h2>AI Assistant</h2>
       <div className="chat-container">
         <div className="chat-messages">
           {messages.map((msg, i) => (
