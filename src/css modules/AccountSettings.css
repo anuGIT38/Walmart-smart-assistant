@@ -1,0 +1,59 @@
+.account-settings {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+.account-settings h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.account-settings label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+}
+
+.account-settings input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.account-settings .optional {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-group button:first-child {
+  background-color: #0078d4;
+  color: white;
+}
+
+.button-group button:last-child {
+  background-color: #ccc;
+}
