@@ -1,0 +1,294 @@
+[
+  {
+    "id":"23",
+    "name": "Full Cream",
+    "brand": "Mother Dairy",
+    "price": 30,
+    "category": "milk",
+    "features": "500ml, Creamy taste",
+    "tags": [
+      "dairy",
+      "rich",
+      "high-fat"
+    ]
+  },
+  {
+    "id":"24",
+    "name": "Slim Milk",
+    "brand": "Nestle",
+    "price": 32,
+    "category": "milk",
+    "features": "Low fat, high protein",
+    "tags": [
+      "low-fat",
+      "protein-rich",
+      "healthy",
+      "dairy"
+    ]
+  },
+  {
+    "id":"25",
+    "name": "Taaza Toned Milk",
+    "brand": "Amul",
+    "price": 28,
+    "category": "milk",
+    "features": "500ml, Toned milk",
+    "tags": [
+      "dairy",
+      "toned",
+      "balanced",
+      "calcium",
+      "healthy"
+    ]
+  },
+{ 
+  "id": "28",
+  "name": "Tata Tea Premium",
+  "brand": "Tata",
+  "price": 155,
+  "category": "beverage",
+  "features": "Strong taste, Indian blend",
+  "tags": ["tea", "strong", "classic"]
+},
+{
+  "id": "29",
+  "name": "Lipton Green Tea",
+  "brand": "Lipton",
+  "price": 210,
+  "category": "beverage",
+  "features": "Green tea, rich in antioxidants",
+  "tags": ["tea", "green-tea", "healthy"]
+},
+{
+  "id": "30",
+  "name": "Nescafé Classic Coffee 100g",
+  "brand": "Nescafé",
+  "price": 285,
+  "category": "beverage",
+  "features": "Instant coffee, rich aroma",
+  "tags": ["coffee", "instant", "energizing"]
+},
+{
+  "id": "31",
+  "name": "Bru Gold Instant Coffee 100g",
+  "brand": "Bru",
+  "price": 275,
+  "category": "beverage",
+  "features": "Smooth and strong flavor",
+  "tags": ["coffee", "instant", "strong"]
+},
+{
+  "id":"26",
+  "name": "Real Fruit Power Orange 1L",
+  "brand": "Real",
+  "price": 110,
+  "category": "beverage",
+  "features": "No added preservatives, vitamin C rich",
+  "tags": ["juice", "fruit", "vitamin-c", "healthy"]
+},
+{
+  "id":"27",
+  "name": "B Natural Mixed Fruit Juice 1L",
+  "brand": "ITC",
+  "price": 105,
+  "category": "beverage",
+  "features": "No added sugar, made from fruit pulp",
+  "tags": ["juice", "mixed-fruit", "no-added-sugar", "healthy"]
+},
+  {
+    "id":"10",
+    "name": "Levi's 511 Slim Fit Jeans",
+    "brand": "Levi's",
+    "price": 3599,
+    "category": "apparel",
+    "features": "Stretch denim, mid-rise fit"
+  },
+  {
+    "id":"11",
+    "name": "Regular Fit",
+    "brand": "Pepe Jeans",
+    "price": 2499,
+    "category": "apparel",
+    "features": "Dark wash, mid-rise"
+  },
+  {
+    "id":"12",
+    "name": "Tapered Fit",
+    "brand": "Wrangler",
+    "price": 1999,
+    "category": "apparel",
+    "features": "Comfort stretch"
+  },
+  {
+    "id":"13",
+    "name": "Wrangler Regular Fit Jeans",
+    "brand": "Wrangler",
+    "price": 1999,
+    "category": "apparel",
+    "features": "Classic blue, 5-pocket design"
+  },
+  {
+    "id":"5",
+    "name": "Dell Inspiron 15",
+    "brand": "Dell",
+    "price": 49999,
+    "category": "laptop",
+    "features": "AMD Ryzen 5, 512GB SSD"
+  },
+  {
+    "id":"6",
+    "name": "HP Pavilion 14",
+    "brand": "HP",
+    "price": 58999,
+    "category": "laptop",
+    "features": "Intel i5, 16GB RAM"
+  },
+  {
+    "id":"7",
+    "name": "IdeaPad Slim 3",
+    "brand": "Lenovo",
+    "price": 42999,
+    "category": "laptop",
+    "features": "Intel i3, FHD Display"
+  },
+  {
+    "id":"14",
+    "name": "Anti-Dandruff Shampoo",
+    "brand": "Head & Shoulders",
+    "price": 250,
+    "category": "haircare",
+    "features": "Reduces dandruff, cool menthol"
+  },
+  {
+    "id":"15",
+    "name": "Daily Shine Shampoo",
+    "brand": "Dove",
+    "price": 270,
+    "category": "haircare",
+    "features": "Softens and adds shine"
+  },
+  {
+    "id":"16",
+    "name": "Hair Fall Control Shampoo",
+    "brand": "Pantene",
+    "price": 290,
+    "category": "haircare",
+    "features": "Strengthens roots"
+  },
+  {
+    "id":"17",
+    "name": "L'Oreal Paris Total Repair 5 Shampoo",
+    "brand": "L'Oreal",
+    "price": 259,
+    "category": "haircare",
+    "features": "Keratin, for damaged hair"
+  },
+  {
+    "id":"18",
+    "name": "WOW Apple Cider Vinegar Shampoo",
+    "brand": "WOW",
+    "price": 299,
+    "category": "haircare",
+    "features": "Sulfate-free, pH balanced"
+  },
+  {
+    "id":"8",
+    "name": "Adidas Ultraboost 22",
+    "brand": "Adidas",
+    "price": 8999,
+    "category": "shoes",
+    "features": "Responsive Boost midsole, Primeknit upper"
+  },
+  {
+    "id":"9",
+    "name": "Nike Revolution 6 Running Shoes",
+    "brand": "Nike",
+    "price": 4199,
+    "category": "shoes",
+    "features": "Cushioned sole, breathable mesh"
+  },
+  {
+    "id": "1",
+    "name": "Apple iPhone 15 (128GB)",
+    "brand": "Apple",
+    "price": 79900,
+    "category": "smartphone",
+    "features": "128 GB, A16 Bionic, 6.1-inch display"
+  },
+  {
+    "id":"2",
+    "name": "Galaxy S22",
+    "brand": "Samsung",
+    "price": 59999,
+    "category": "smartphone",
+    "features": "8GB RAM, AMOLED Display"
+  },
+  {
+    "id":"3",
+    "name": "OnePlus 11R",
+    "brand": "OnePlus",
+    "price": 39999,
+    "category": "smartphone",
+    "features": "Snapdragon 8+ Gen1"
+  },
+  {
+    "id":"4",
+    "name": "Samsung Galaxy A54",
+    "brand": "Samsung",
+    "price": 29999,
+    "category": "smartphone",
+    "features": "128 GB, AMOLED display, 5000mAh battery"
+  },
+  {
+    "id":"19",
+    "name": "Classic Salted",
+    "brand": "Lay's",
+    "price": 30,
+    "category": "snacks",
+    "features": "Crispy potato chips",
+    "tags": [
+      "simple",
+      "salty",
+      "processed"
+    ]
+  },
+  {
+    "id":"20",
+    "name": "Doritos Nacho Cheese Chips 150g",
+    "brand": "Doritos",
+    "price": 70,
+    "category": "snacks",
+    "features": "Corn chips, cheesy flavor",
+    "tags": [
+      "processed",
+      "cheesy",
+      "indulgent"
+    ]
+  },
+  {
+    "id":"21",
+    "name": "Kurkure Masala Munch",
+    "brand": "Kurkure",
+    "price": 25,
+    "category": "snacks",
+    "features": "Spicy, crunchy sticks",
+    "tags": [
+      "spicy",
+      "processed",
+      "indulgent"
+    ]
+  },
+  {
+    "id":"22",
+    "name": "Mad Angles",
+    "brand": "Bingo",
+    "price": 25,
+    "category": "snacks",
+    "features": "Tangy tomato flavor",
+    "tags": [
+      "tangy",
+      "processed",
+      "budget"
+    ]
+  }
+]
